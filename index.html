@@ -5,8 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Coffeenese</title>
 
-    <script type="text/javascript" src="floating-whatsapp/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="floating-whatsapp/floating-wpp.min.js"></script>
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="floating-wpp.css">
+    <script type="text/javascript" src="floating-wpp.js"></script>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif
+        }
+    </style>
 
     <link rel="shortcut icon" type="image/x-icon" href="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text y=%22.9em%22 font-size=%2290%22&gt;☕️&lt;/text&gt;&lt;/svg&gt;">
 
@@ -327,6 +333,8 @@
                 <p class="text-xs leading-normal mt-2 text-gray-500">Don't forget to visit our social media platform.</p>
             </div>
         </div>
+        <div id="div_wa"></div>
+
         <div class="flex justify-center mt-4 space-x-6">
             <a href="https://www.facebook.com/profile.php?id=100084589655360" target="_blank" class="text-gray-400 hover:text-gray-500">
                 <span class="sr-only">Facebook</span>
@@ -354,6 +362,19 @@
                 <a href="#_" class="text-sm text-gray-600 transition hover:text-primary">Privacy</a>
             </div>
         </div>
+        <div id="div_wa"></div>
+          <script type="text/javascript">
+            $(function () {
+              $('#div_wa').floatingWhatsApp({
+                phone: '62895387170703',
+                position: 'right',
+                popupMessage: 'Hello, how can we help you?',
+                message: "I'd like to order a green beans",
+                showPopup: true,
+                headerTitle: 'Welcome to Coffeenese Global!',
+              });
+            });
+          </script>
     </div>
 </section>
 
@@ -361,13 +382,4 @@
 </body>
 </html>
 
-<body>
-    <div id="myDiv"></div>
-  </body>
-  <script type="text/javascript">
-    $(function () {
-      $('#myDiv').floatingWhatsApp({
-        phone: '5491133359850'
-      });
-    });
-  </script>
+
